@@ -12,4 +12,13 @@
     <servlet-name>FormServlet</servlet-name>
     <url-pattern>/form-servlet</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AddServlet</servlet-name>
+    <servlet-class>back.third.servlets.AddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddServlet</servlet-name>
+    <url-pattern>/add-servlet</url-pattern>
+  </servlet-mapping>
 </web-app>

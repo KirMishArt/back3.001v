@@ -2,6 +2,9 @@ package back.third.model;
 
 public class Person {
     int id;
+    String name;
+    String surname;
+    String second_name;
     String tel;
     String email;
     String birth;
@@ -9,8 +12,16 @@ public class Person {
     String fovoLang;
     String bio;
 
-    public Person(int id, String tel, String email, String birth, String gender, String fovoLang, String bio) {
-        this.id = id;
+
+
+    public Person() {
+
+    }
+
+    public Person(String name, String surname, String second_name, String tel, String email, String birth, String gender, String fovoLang, String bio) {
+        this.name = name;
+        this.surname = surname;
+        this.second_name = second_name;
         this.tel = tel;
         this.email = email;
         this.birth = birth;
@@ -19,8 +30,17 @@ public class Person {
         this.bio = bio;
     }
 
-    public Person() {
-
+    public Person(int id, String name, String surname, String second_name, String tel, String email, String birth, String gender, String fovoLang, String bio) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.second_name = second_name;
+        this.tel = tel;
+        this.email = email;
+        this.birth = birth;
+        this.gender = gender;
+        this.fovoLang = fovoLang;
+        this.bio = bio;
     }
 
     public int getId() {
@@ -29,6 +49,30 @@ public class Person {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public String getSecond_name() {
+        return second_name;
+    }
+
+    public void setSecond_name(String second_name) {
+        this.second_name = second_name;
     }
 
     public String getTel() {

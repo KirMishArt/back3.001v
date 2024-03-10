@@ -16,25 +16,11 @@ import java.util.List;
 public class FormServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-
         PersonDAO personDAO = new PersonDAO();
         List<Person> persons = personDAO.getAllPersons();
 
-        out.println("<table border='1'>");
-        out.println("<tr><th>ID</th><th>Tel</th><th>Email</th><th>Birth</th><th>Gender</th><th>Favo Lang</th><th>Bio</th></tr>");
-        for (Person person : persons) {
-            out.println("<tr>");
-            out.println("<td>" + person.getId() + "</td>");
-            out.println("<td>" + person.getTel() + "</td>");
-            out.println("<td>" + person.getEmail() + "</td>");
-            out.println("<td>" + person.getBirth() + "</td>");
-            out.println("<td>" + person.getGender() + "</td>");
-            out.println("<td>" + person.getFovoLang() + "</td>");
-            out.println("<td>" + person.getBio() + "</td>");
-            out.println("</tr>");
-        }
-        out.println("</table>");
+        request.setAttribute("persons", persons);
+        request.getRequestDispatcher("/WEB-INF/persons.jsp").forward(request, response);
     }
+
 }
