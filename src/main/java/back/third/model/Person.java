@@ -1,16 +1,16 @@
 package back.third.model;
 
 public class Person {
-    int id;
-    String name;
-    String surname;
-    String second_name;
-    String tel;
-    String email;
-    String birth;
-    String gender;
-    String fovoLang;
-    String bio;
+    private int id;
+    private String name;
+    private String surname;
+    private String second_name;
+    private String tel;
+    private String email;
+    private String birth;
+    private String gender;
+    private String fovoLang;
+    private String bio;
 
 
 

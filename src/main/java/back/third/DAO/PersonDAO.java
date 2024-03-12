@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PersonDAO {
-    String url = "jdbc:postgresql://localhost:5432/postgres";
-    String password="artemkas2233";
-    String username="postgres";
+    private String url = "jdbc:postgresql://89.223.124.75:5432/postgres";
+    private String password="artemkas2233";
+    private String username="postgres";
     public List<Person> getAllPersons() {
         List<Person> persons = new ArrayList<>();
 
