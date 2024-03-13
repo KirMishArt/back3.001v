@@ -26,6 +26,6 @@ public class AddServlet extends HttpServlet {
         Person person=new Person(name,surname,second_name,tel,email,birth,gender,fovolang,bio);
         PersonDAO personDAO=new PersonDAO();
         personDAO.addPerson(person);
-        resp.sendRedirect("/back3_war/persons");
+        resp.sendRedirect(req.getContextPath() + "/persons");
     }
 }
